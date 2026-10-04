@@ -1,374 +1,413 @@
 <!DOCTYPE html>
 <html lang="ko">
+
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>NO-SHOW</title>
-    <link rel="stylesheet" href="style.css">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <title>NO-SHOW</title>
+
+  <link rel="stylesheet" href="style.css">
+
+  <style>
+    /* ================================
+       NO-SHOW : ARCHIVE FIX
+    ================================= */
+
+    .archive-section {
+      width: min(100% - 40px, 900px);
+      margin: 100px auto;
+    }
+
+    .section-title {
+      display: flex;
+      align-items: center;
+      gap: 14px;
+      margin-bottom: 28px;
+    }
+
+    .section-title h2 {
+      margin: 0;
+      font-size: 20px;
+      letter-spacing: 0.12em;
+    }
+
+    .section-no {
+      font-size: 11px;
+      color: #6b8f71;
+    }
+
+    .section-line {
+      flex: 1;
+      height: 1px;
+      background: #d8ddd9;
+    }
+
+    .session-card {
+      border: 1px solid #d9dedb;
+      background: #fff;
+      transition: 0.25s ease;
+    }
+
+    .session-card:hover {
+      transform: translateY(-3px);
+      border-color: #76947c;
+      box-shadow: 0 10px 25px rgba(40, 60, 45, 0.08);
+    }
+
+    .session-card-top {
+      display: flex;
+      justify-content: space-between;
+      padding: 13px 18px;
+      border-bottom: 1px solid #e8ebe9;
+      font-size: 10px;
+      letter-spacing: 0.12em;
+      color: #7b817d;
+    }
+
+    .session-type {
+      color: #6b8f71;
+    }
+
+    .session-card-main {
+      display: flex;
+      align-items: center;
+      gap: 22px;
+      padding: 27px 22px;
+    }
+
+    .session-number {
+      width: 48px;
+      height: 48px;
+
+      display: flex;
+      align-items: center;
+      justify-content: center;
+
+      border: 1px solid #d3dad5;
+
+      font-size: 12px;
+      color: #6b8f71;
+      letter-spacing: 0.08em;
+    }
+
+    .session-info {
+      flex: 1;
+    }
+
+    .session-info h3 {
+      margin: 0 0 7px;
+      font-size: 21px;
+      font-weight: 600;
+    }
+
+    .session-subtitle {
+      margin: 0 0 15px;
+      font-size: 12px;
+      color: #8a8f8b;
+    }
+
+    .session-meta {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 8px 18px;
+      font-size: 11px;
+      color: #656b67;
+    }
+
+    .session-open {
+      flex-shrink: 0;
+
+      display: flex;
+      align-items: center;
+      gap: 8px;
+
+      padding: 10px 15px;
+
+      border: 1px solid #1f2421;
+
+      color: #1f2421;
+      text-decoration: none;
+
+      font-size: 10px;
+      letter-spacing: 0.1em;
+
+      transition: 0.2s ease;
+    }
+
+    .session-open:hover {
+      background: #1f2421;
+      color: #fff;
+    }
+
+    .session-card-bottom {
+      display: flex;
+      justify-content: space-between;
+
+      padding: 10px 18px;
+
+      border-top: 1px solid #e8ebe9;
+
+      font-size: 9px;
+      letter-spacing: 0.12em;
+      color: #a0a5a1;
+    }
+
+    @media (max-width: 600px) {
+
+      .archive-section {
+        width: calc(100% - 28px);
+        margin: 70px auto;
+      }
+
+      .session-card-main {
+        align-items: flex-start;
+        flex-wrap: wrap;
+      }
+
+      .session-info {
+        width: calc(100% - 70px);
+      }
+
+      .session-open {
+        margin-left: auto;
+      }
+
+    }
+  </style>
+
 </head>
+
 
 <body>
 
-    <main class="site">
+<main class="site">
 
-        <!-- HEADER -->
-        <header class="header">
-            <div class="logo">NO-SHOW</div>
 
-            <nav class="menu">
-                <a href="#home">HOME</a>
-                <a href="#profile">PROFILE</a>
-                <a href="#gallery">GALLERY</a>
-                <a href="#story">STORY</a>
-            </nav>
-        </header>
+  <!-- ================================
+       MAIN / HERO
+  ================================= -->
 
-        <!-- HOME -->
-<section id="home" class="hero">
+  <section class="hero">
 
     <div class="hero-image">
-
-        <img src="main.png" alt="NO-SHOW main artwork">
-
-        <div class="hero-logo">
-            NO-SHOW
-        </div>
-
+      <img src="main.png" alt="NO-SHOW">
     </div>
 
-
-    <!-- 커플명 -->
-    <div class="pair-name">
-        SHINODA TETSU
-        <span>×</span>
-        KAZUKI SHOW
+    <div class="hero-title">
+      <span>NO-SHOW</span>
     </div>
 
-
-    <!-- 캐릭터 정보 -->
-    <div class="character-info">
-
-        <div class="character left">
-            <p class="character-name">SHINODA TETSU</p>
-            <p class="character-role">TOP / 175 cm</p>
-            <p class="character-desc">
-                무심 · 덤덤 · 천연<br>
-                말수는 적지만 행동은 다정한 타입
-            </p>
-        </div>
-
-
-        <div class="character right">
-            <p class="character-name">KAZUKI SHOW</p>
-            <p class="character-role">BOTTOM / 183 cm</p>
-            <p class="character-desc">
-                능글 · 가벼움 · 여우<br>
-                장난스러워 보여도 은근히 진심인 타입
-            </p>
-        </div>
-
-    </div>
-
-</section>
-```
+  </section>
 
 
 
-        <!-- PROFILE -->
-<section id="profile" class="section profile-section">
+  <!-- ================================
+       GALLERY
+  ================================= -->
+
+  <section class="gallery-section">
 
     <div class="section-title">
-        <span>01</span>
-        <h2>PROFILE</h2>
+      <span class="section-no">01</span>
+      <h2>GALLERY</h2>
+      <span class="section-line"></span>
     </div>
-
-
-    <div class="profile-grid">
-
-
-        <!-- TETSU -->
-        <article class="profile-card tetsu">
-
-            <div class="profile-image">
-                <img src="images/tetsu.png" alt="Shinoda Tetsu">
-            </div>
-
-            <div class="profile-content">
-
-                <div class="profile-number">01</div>
-
-                <h3>SHINODA<br>TETSU</h3>
-
-                <p class="profile-role">
-                    TOP / 175 cm
-                </p>
-
-                <div class="profile-line"></div>
-
-                <p class="profile-keywords">
-                    無心 · CALM · NATURAL
-                </p>
-
-                <p class="profile-description">
-                    무심하고 덤덤한 성격.<br>
-                    말수가 적고 감정 표현도 크지 않지만<br>
-                    의외로 상대를 세심하게 챙긴다.
-                </p>
-
-            </div>
-
-        </article>
-
-
-        <!-- SHOW -->
-        <article class="profile-card show">
-
-            <div class="profile-image">
-                <img src="images/show.png" alt="Kazuki Show">
-            </div>
-
-            <div class="profile-content">
-
-                <div class="profile-number">02</div>
-
-                <h3>KAZUKI<br>SHOW</h3>
-
-                <p class="profile-role">
-                    BOTTOM / 183 cm
-                </p>
-
-                <div class="profile-line"></div>
-
-                <p class="profile-keywords">
-                    PLAYFUL · FOX · LIGHT
-                </p>
-
-                <p class="profile-description">
-                    가볍고 능글맞은 성격.<br>
-                    장난과 농담을 좋아하며 사람을 놀리는 것도 좋아한다.<br>
-                    하지만 의외로 속은 진지하다.
-                </p>
-
-            </div>
-
-        </article>
-
-    </div>
-
-
-    <div class="profile-footer">
-        <span>SHINODA TETSU</span>
-        <span>×</span>
-        <span>KAZUKI SHOW</span>
-    </div>
-
-</section>
-
-
-        <!-- GALLERY -->
-<section id="gallery" class="section gallery-section">
-
-    <div class="section-title">
-        <span>02</span>
-        <h2>GALLERY</h2>
-    </div>
-
 
     <div class="gallery-grid">
 
-      <button class="gallery-item" data-image="images/gallery01.png">
-      <img src="images/gallery01.png" alt="NO-SHOW gallery 01">
-      <span class="gallery-number">01</span>
-
-    <a
-        href="https://kre.pe/p0sY"
-        target="_blank"
-        rel="noopener noreferrer"
-        class="gallery-credit"
-        onclick="event.stopPropagation();"
-    >
-        ART BY 민이 @MINISIFF
-    </a>
-
-<button class="gallery-item" data-image="images/gallery02.png">
-
-    <img src="images/gallery02.png" alt="NO-SHOW gallery 02">
-
-    <span class="gallery-number">02</span>
-
-    <a
-        href="https://kre.pe/3fO8"
-        target="_blank"
-        rel="noopener noreferrer"
-        class="gallery-credit"
-        onclick="event.stopPropagation();"
-    >
-        ART BY 모스코 @w_grass_w
-    </a>
-
-</button>
-
-    <button class="gallery-item" data-image="images/gallery03.png">
-    <img src="images/gallery03.png" alt="NO-SHOW gallery 03">
-    <span class="gallery-number">03</span>
-    <span class="gallery-credit">ART BY 작가명</span>
-    </button>
+      <img src="gallery01.png" alt="">
+      <img src="gallery02.png" alt="">
 
     </div>
 
+  </section>
 
-    <div class="gallery-more">
-        MORE NO-SHOW ARCHIVE
+
+
+  <!-- ================================
+       CHARACTERS
+  ================================= -->
+
+  <section class="character-section">
+
+    <div class="section-title">
+      <span class="section-no">02</span>
+      <h2>CHARACTERS</h2>
+      <span class="section-line"></span>
     </div>
 
-</section>
+
+    <div class="character-grid">
 
 
-<!-- LIGHTBOX -->
-<div class="lightbox" id="lightbox">
+      <!-- TETSU -->
 
-    <button class="lightbox-close" id="lightboxClose">
-        ×
-    </button>
+      <article class="character-card">
 
-    <img id="lightboxImage" src="" alt="NO-SHOW gallery">
-
-</div>
-
-<!-- ================================
-     ARCHIVE
-================================= -->
-<section id="archive" class="archive-section">
-
-  <div class="section-title">
-    <span class="section-no">03</span>
-    <h2>ARCHIVE</h2>
-    <span class="section-line"></span>
-  </div>
-
-  <!-- SESSION CARD -->
-  <article class="session-card">
-
-    <div class="session-card-top">
-      <span class="session-type">COC / TRPG</span>
-      <span class="session-date">2026.10.05</span>
-    </div>
-
-    <div class="session-card-main">
-
-      <div class="session-number">
-        001
-      </div>
-
-      <div class="session-info">
-        <h3>父の不倫に感謝しています</h3>
-
-        <p class="session-subtitle">
-          「아버지의 불륜에 감사하고 있습니다」
-        </p>
-
-        <div class="session-meta">
-          <span>GM. 지영</span>
-          <span>PL. 시노다 테츠 × 카즈키 쇼우</span>
+        <div class="character-image">
+          <img src="tetsu.png" alt="시노다 테츠">
         </div>
+
+        <div class="character-info">
+
+          <span class="character-role">攻 / 175cm</span>
+
+          <h3>시노다 테츠</h3>
+
+          <p>
+            무심 · 덤덤 · 천연 · 아기
+          </p>
+
+        </div>
+
+      </article>
+
+
+
+      <!-- SHOU -->
+
+      <article class="character-card">
+
+        <div class="character-image">
+          <img src="show.png" alt="카즈키 쇼우">
+        </div>
+
+        <div class="character-info">
+
+          <span class="character-role">受 / 183cm</span>
+
+          <h3>카즈키 쇼우</h3>
+
+          <p>
+            뻔뻔 · 능글 · 장난기 많음
+          </p>
+
+        </div>
+
+      </article>
+
+
+    </div>
+
+  </section>
+
+
+
+  <!-- ================================
+       ARCHIVE
+  ================================= -->
+
+  <section id="archive" class="archive-section">
+
+    <div class="section-title">
+      <span class="section-no">03</span>
+      <h2>ARCHIVE</h2>
+      <span class="section-line"></span>
+    </div>
+
+
+    <article class="session-card">
+
+
+      <div class="session-card-top">
+
+        <span class="session-type">
+          COC / TRPG
+        </span>
+
+        <span>
+          2026.10.05
+        </span>
+
       </div>
 
-      <a
-        href="chichi-log.html"
-        class="session-open"
-      >
-        OPEN
-        <span>↗</span>
-      </a>
-
-    </div>
-
-    <div class="session-card-bottom">
-      <span>SESSION LOG</span>
-      <span>NO-SHOW / 001</span>
-    </div>
-
-  </article>
-
-</section>
 
 
-        <!-- FOOTER -->
-        <footer>
-            <p>NO-SHOW</p>
-            <span>© 2026</span>
-        </footer>
-
-    </main>
-
-<script>
-
-    const galleryItems = document.querySelectorAll(".gallery-item");
-
-    const lightbox = document.getElementById("lightbox");
-
-    const lightboxImage = document.getElementById("lightboxImage");
-
-    const lightboxClose = document.getElementById("lightboxClose");
+      <div class="session-card-main">
 
 
-    /* 이미지 클릭 */
-
-    galleryItems.forEach(item => {
-
-        item.addEventListener("click", () => {
-
-            const image = item.dataset.image;
-
-            lightboxImage.src = image;
-
-            lightbox.classList.add("active");
-
-        });
-
-    });
+        <div class="session-number">
+          001
+        </div>
 
 
-    /* 닫기 버튼 */
+        <div class="session-info">
 
-    lightboxClose.addEventListener("click", () => {
+          <h3>
+            父の不倫に感謝しています
+          </h3>
 
-        lightbox.classList.remove("active");
-
-        lightboxImage.src = "";
-
-    });
-
-
-    /* 배경 클릭해도 닫기 */
-
-    lightbox.addEventListener("click", (event) => {
-
-        if (event.target === lightbox) {
-
-            lightbox.classList.remove("active");
-
-            lightboxImage.src = "";
-
-        }
-
-    });
+          <p class="session-subtitle">
+            아버지의 불륜에 감사하고 있습니다
+          </p>
 
 
-    /* ESC로 닫기 */
+          <div class="session-meta">
 
-    document.addEventListener("keydown", (event) => {
+            <span>
+              GM. 지영
+            </span>
 
-        if (event.key === "Escape") {
+            <span>
+              PL. 시노다 테츠 × 카즈키 쇼우
+            </span>
 
-            lightbox.classList.remove("active");
+          </div>
 
-            lightboxImage.src = "";
+        </div>
 
-        }
 
-    });
 
-</script>
-  </body>
+        <!-- ★ 로그 링크 수정 완료 ★ -->
+
+        <a
+          href="chichi-log.html"
+          class="session-open"
+        >
+          OPEN
+          <span>↗</span>
+        </a>
+
+
+      </div>
+
+
+
+      <div class="session-card-bottom">
+
+        <span>
+          SESSION LOG
+        </span>
+
+        <span>
+          NO-SHOW / 001
+        </span>
+
+      </div>
+
+
+    </article>
+
+  </section>
+
+
+
+  <!-- ================================
+       FOOTER
+  ================================= -->
+
+  <footer>
+
+    <p>
+      NO-SHOW
+    </p>
+
+  </footer>
+
+
+</main>
+
+</body>
+
 </html>
