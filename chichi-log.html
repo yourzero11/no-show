@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <title>父の不倫に感謝しています — SESSION LOG</title>
+
+  <style>
+
+    * {
+      box-sizing: border-box;
+    }
+
+    body {
+      margin: 0;
+      background: #f6f7f5;
+      color: #222722;
+      font-family:
+        -apple-system,
+        BlinkMacSystemFont,
+        "Noto Sans KR",
+        sans-serif;
+    }
+
+    /* HEADER */
+
+    .log-header {
+      position: sticky;
+      top: 0;
+      z-index: 100;
+
+      background: rgba(246,247,245,0.94);
+      backdrop-filter: blur(10px);
+
+      border-bottom: 1px solid #dfe4e0;
+
+      padding: 22px;
+    }
+
+    .log-header-inner {
+      width: min(100%, 1100px);
+      margin: auto;
+    }
+
+    .back {
+      display: inline-block;
+
+      margin-bottom: 16px;
+
+      color: #657b69;
+      text-decoration: none;
+
+      font-size: 11px;
+      letter-spacing: 0.08em;
+    }
+
+    .back:hover {
+      text-decoration: underline;
+    }
+
+    .log-title {
+      margin: 0;
+
+      font-size: 24px;
+      font-weight: 600;
+    }
+
+    .log-meta {
+      margin-top: 8px;
+
+      font-size: 11px;
+      color: #7c837e;
+    }
+
+
+    /* LOG AREA */
+
+    .log-wrap {
+      width: min(100% - 28px, 1100px);
+      margin: 30px auto 80px;
+    }
+
+    .log-frame {
+      width: 100%;
+      height: 75vh;
+
+      border: 1px solid #dce2de;
+      background: #fff;
+
+      box-shadow:
+        0 8px 30px rgba(40, 55, 45, 0.05);
+    }
+
+    .log-frame iframe {
+      width: 100%;
+      height: 100%;
+
+      border: 0;
+      display: block;
+    }
+
+
+    /* MOBILE */
+
+    @media (max-width: 600px) {
+
+      .log-header {
+        padding: 18px 14px;
+      }
+
+      .log-title {
+        font-size: 19px;
+      }
+
+      .log-wrap {
+        width: calc(100% - 18px);
+        margin-top: 18px;
+      }
+
+      .log-frame {
+        height: 78vh;
+      }
+
+    }
+
+  </style>
+</head>
+
+
+<body>
+
+  <header class="log-header">
+
+    <div class="log-header-inner">
+
+      <a href="../index.html" class="back">
+        ← BACK TO ARCHIVE
+      </a>
+
+      <h1 class="log-title">
+        父の不倫に感謝しています
+      </h1>
+
+      <div class="log-meta">
+        COC / GM. 지영 / PL. 시노다 테츠 × 카즈키 쇼우
+      </div>
+
+    </div>
+
+  </header>
+
+
+  <main class="log-wrap">
+
+    <div class="log-frame">
+
+      <iframe
+        src="main.html"
+        title="TRPG Session Log">
+      </iframe>
+
+    </div>
+
+  </main>
+
+</body>
+
+</html>
